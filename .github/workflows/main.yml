@@ -60,7 +60,7 @@ jobs:
                 # Для каждого пересобранного образа 
                 # устанавливаем тег latest, чтобы потом
                 # на сервере и в docker-compose.yml не указывать версию
-                tags: zemagreen/taski_backend:latest 
+                tags: ${{ secrets.DOCKER_USERNAME }}/taski_backend:latest 
     steps:
     # Копируем код проекта
     - name: Check out code
@@ -106,7 +106,7 @@ jobs:
                 # Для каждого пересобранного образа 
                 # устанавливаем тег latest, чтобы потом
                 # на сервере и в docker-compose.yml не указывать версию
-                tags: zemagreen/taski_backend:latest 
+                tags: ${{ secrets.DOCKER_USERNAME }}/taski_backend:latest 
     
     # Чтобы запустить тесты, нужно установить зависимости
     - name: Install dependencies
